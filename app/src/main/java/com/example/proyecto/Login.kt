@@ -12,10 +12,6 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val database= Firebase.database
-        val myref= database.getReference("message")
-
-        myref.setValue("Hello, World!")
     }
     fun Logeo(){
         val userName=findViewById<EditText>(R.id.editTextText5).text
@@ -26,9 +22,9 @@ class Login : AppCompatActivity() {
 
         val database=Firebase.database
         database.goOnline()
-        database.auth().onAuthStateChaged(function(user)){
+        /*database.auth().onAuthStateChaged(function(user)){
 
-        }
+        }*/
 
     }
 }
